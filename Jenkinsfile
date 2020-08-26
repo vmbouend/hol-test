@@ -30,7 +30,7 @@ pipeline {
                 script {
               checkout scm
                     docker.withRegistrty('','DockerRegistryID') { 
-              def customImage = docker.build(mvalerie2020/hol-pipeline:${env.BUILD_ID}")
+              def customImage = docker.build("mvalerie2020/hol-pipeline:${env.BUILD_ID}")
               customImage.push() 
                 
             }
